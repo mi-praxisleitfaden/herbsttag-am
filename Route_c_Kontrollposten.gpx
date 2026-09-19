@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Herbsttag AM" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata><name>Kontrollposten Route c - Herbsttag AM</name></metadata>
+  <wpt lat="47.407616" lon="8.051780">
+    <name>Route c - Start: Schulzentrum Stock</name>
+    <desc>Kontrollposten | Route c, 1 von 9 | LV95 2646279 / 1250937</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.396698" lon="8.048374">
+    <name>Route c - Zurlinden-Insel (Kontrolle Abkürzung)</name>
+    <desc>Kontrollposten | Route c, 2 von 9 | LV95 2646032 / 1249721</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.411135" lon="8.082064">
+    <name>Route c - Posten 1: Bibersteiner Aarebrücke</name>
+    <desc>Kontrollposten | Route c, 4 von 9 | LV95 2648562 / 1251346</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.412178" lon="8.114466">
+    <name>Route c - Posten 2: Rupperswil Kraftwerk</name>
+    <desc>Kontrollposten | Route c, 6 von 9 | LV95 2651006 / 1251483</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.400604" lon="8.163145">
+    <name>Route c - Posten 3: Länzert-Feld</name>
+    <desc>Kontrollposten | Route c, 8 von 9 | LV95 2654692 / 1250229</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.409609" lon="8.156958">
+    <name>Route c - Ziel: Aargauer Mitte</name>
+    <desc>Kontrollposten | Route c, 9 von 9 | LV95 2654216 / 1251225</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+</gpx>

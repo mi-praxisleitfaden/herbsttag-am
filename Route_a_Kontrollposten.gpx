@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Herbsttag AM" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata><name>Kontrollposten Route a - Herbsttag AM</name></metadata>
+  <wpt lat="47.407616" lon="8.051780">
+    <name>Route a - Start: Schulzentrum Stock</name>
+    <desc>Kontrollposten | Route a, 1 von 9 | LV95 2646279 / 1250937</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.411242" lon="8.066569">
+    <name>Route a - Rüchlig, Aarebrücke Küttigen</name>
+    <desc>Orientierungspunkt | Route a, 2 von 9 | LV95 2647392 / 1251348</desc>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="47.411135" lon="8.082064">
+    <name>Route a - Posten 1: Bibersteiner Aarebrücke</name>
+    <desc>Kontrollposten | Route a, 3 von 9 | LV95 2648562 / 1251346</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.402629" lon="8.094282">
+    <name>Route a - Hinterdorf, Aarau Rohr</name>
+    <desc>Orientierungspunkt | Route a, 4 von 9 | LV95 2649492 / 1250408</desc>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="47.401488" lon="8.116286">
+    <name>Route a - Posten 2: Rupperswil Eisenbahnbrücke</name>
+    <desc>Kontrollposten | Route a, 5 von 9 | LV95 2651154 / 1250295</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.394977" lon="8.121270">
+    <name>Route a - Posten 2: Rupperswil Höhe 398</name>
+    <desc>Kontrollposten | Route a, 6 von 9 | LV95 2651537 / 1249575</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.403827" lon="8.145252">
+    <name>Route a - Posten 3: Länzert, Brücke Zubringer T5</name>
+    <desc>Kontrollposten | Route a, 8 von 9 | LV95 2653338 / 1250575</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.409609" lon="8.156958">
+    <name>Route a - Ziel: Aargauer Mitte</name>
+    <desc>Kontrollposten | Route a, 9 von 9 | LV95 2654216 / 1251225</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+</gpx>

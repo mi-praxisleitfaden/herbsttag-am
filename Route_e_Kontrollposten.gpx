@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Herbsttag AM" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata><name>Kontrollposten Route e - Herbsttag AM</name></metadata>
+  <wpt lat="47.407616" lon="8.051780">
+    <name>Route e - Start: Schulzentrum Stock</name>
+    <desc>Kontrollposten | Route e, 1 von 9 | LV95 2646279 / 1250937</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.409692" lon="8.067297">
+    <name>Route e - Rüchlig, Aarebrücke Küttigen</name>
+    <desc>Orientierungspunkt | Route e, 2 von 9 | LV95 2647449 / 1251177</desc>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="47.411135" lon="8.082064">
+    <name>Route e - Posten 1: Bibersteiner Aarebrücke</name>
+    <desc>Kontrollposten | Route e, 3 von 9 | LV95 2648562 / 1251346</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.412178" lon="8.114466">
+    <name>Route e - Posten 2: Rupperswil Kraftwerk</name>
+    <desc>Kontrollposten | Route e, 5 von 9 | LV95 2651006 / 1251483</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.415150" lon="8.152111">
+    <name>Route e - Posten 3: Auenstein Fahr</name>
+    <desc>Kontrollposten | Route e, 7 von 9 | LV95 2653844 / 1251838</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.409609" lon="8.156958">
+    <name>Route e - Hardhof, Wildegg</name>
+    <desc>Orientierungspunkt | Route e, 8 von 9 | LV95 2654216 / 1251225</desc>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="47.409609" lon="8.156958">
+    <name>Route e - Ziel: Aargauer Mitte</name>
+    <desc>Kontrollposten | Route e, 9 von 9 | LV95 2654216 / 1251225</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+</gpx>

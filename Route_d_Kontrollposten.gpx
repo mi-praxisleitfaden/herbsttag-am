@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Herbsttag AM" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata><name>Kontrollposten Route d - Herbsttag AM</name></metadata>
+  <wpt lat="47.407616" lon="8.051780">
+    <name>Route d - Start: Schulzentrum Stock</name>
+    <desc>Kontrollposten | Route d, 1 von 9 | LV95 2646279 / 1250937</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.419582" lon="8.075708">
+    <name>Route d - Sighübel / Etzget</name>
+    <desc>Orientierungspunkt | Route d, 2 von 9 | LV95 2648075 / 1252281</desc>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="47.419273" lon="8.082078">
+    <name>Route d - Wällete/Biberstein (Kontrolle Abkürzung)</name>
+    <desc>Kontrollposten | Route d, 3 von 9 | LV95 2648556 / 1252251</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.412288" lon="8.082069">
+    <name>Route d - Schloss Biberstein</name>
+    <desc>Orientierungspunkt | Route d, 4 von 9 | LV95 2648561 / 1251474</desc>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="47.411135" lon="8.082064">
+    <name>Route d - Posten 1: Bibersteiner Aarebrücke</name>
+    <desc>Kontrollposten | Route d, 5 von 9 | LV95 2648562 / 1251346</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.412178" lon="8.114466">
+    <name>Route d - Posten 2: Rupperswil Kraftwerk</name>
+    <desc>Kontrollposten | Route d, 6 von 9 | LV95 2651006 / 1251483</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.408516" lon="8.126173">
+    <name>Route d - Martiloo-Schache</name>
+    <desc>Orientierungspunkt | Route d, 7 von 9 | LV95 2651893 / 1251083</desc>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="47.409576" lon="8.139018">
+    <name>Route d - Posten 3: Rupperswil Giessenschachen</name>
+    <desc>Kontrollposten | Route d, 8 von 9 | LV95 2652862 / 1251210</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <wpt lat="47.409609" lon="8.156958">
+    <name>Route d - Ziel: Aargauer Mitte</name>
+    <desc>Kontrollposten | Route d, 9 von 9 | LV95 2654216 / 1251225</desc>
+    <sym>Flag, Red</sym>
+  </wpt>
+</gpx>
