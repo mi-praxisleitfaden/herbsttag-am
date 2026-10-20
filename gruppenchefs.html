@@ -99,7 +99,7 @@
 <div id="standort-hinweis" class="standort-hinweis" role="status" aria-live="polite">Die Erinnerungen beginnen am 22.10.2026 um 08:45 Uhr.</div>
 <div id="standort-alarm" class="standort-alarm" role="status" aria-live="assertive" hidden><strong>Standortmeldung fällig</strong><span id="standort-alarm-zeit"></span><p>Aktuellen Standort ermitteln und an beide verantwortlichen Lehrpersonen übermitteln.</p></div>
 <div class="standort-aktionen"><button type="button" id="standort-aktivieren" class="standort-button standort-button-alt" disabled>Erinnerungen aktivieren</button><button type="button" id="standort-ermitteln" class="standort-button" disabled>Standort ermitteln</button></div>
-<div id="standort-vorbereitet" class="standort-vorbereitet" hidden><p id="standort-vorschau">Die Teams-Nachricht ist vorbereitet.</p><div class="standort-aktionen"><a id="standort-teams" class="standort-button standort-button-teams" href="#" target="_blank" rel="noopener noreferrer">In Teams öffnen und senden</a><button type="button" id="standort-kopieren" class="standort-button standort-button-alt">Nachricht kopieren</button></div><p class="note">Teams öffnet einen Chat mit den beiden Lehrpersonen. Die Nachricht wird erst versendet, wenn ihr in Teams auf «Senden» tippt.</p></div>
+<div id="standort-vorbereitet" class="standort-vorbereitet" hidden><p id="standort-vorschau">Die Teams-Nachricht ist vorbereitet.</p><div class="standort-aktionen"><a id="standort-teams" class="standort-button standort-button-teams" href="#" target="_blank" rel="noopener noreferrer">In Teams öffnen und senden</a><a id="standort-karte" class="standort-button standort-button-alt" href="#" target="_blank" rel="noopener noreferrer">Standort auf swisstopo prüfen</a><button type="button" id="standort-kopieren" class="standort-button standort-button-alt">Nachricht kopieren</button></div><p class="note">Teams öffnet einen Chat mit den beiden Lehrpersonen. Die Nachricht wird erst versendet, wenn ihr in Teams auf «Senden» tippt.</p></div>
 <p id="standort-meldung" class="standort-meldung" aria-live="polite"></p>
 <p class="note">Vor dem 22. Oktober erstellt «Standort ermitteln» ausschliesslich eine mit <strong>TEST</strong> gekennzeichnete Nachricht. Die Gruppenwahl wird auf diesem Gerät gespeichert, nicht der GPS-Standort.</p>
 <p class="note">Erinnerungen funktionieren nur, solange diese Webseite im Browser geöffnet und aktiv ist. Bei gesperrtem Smartphone oder während der Nutzung von swisstopo können sie ausbleiben. Der Standortzugriff erfordert eine einmalige Browserfreigabe und eine HTTPS-Verbindung.</p>
@@ -154,6 +154,7 @@ const prepared=document.getElementById('standort-vorbereitet');
 const preview=document.getElementById('standort-vorschau');
 const teamsLink=document.getElementById('standort-teams');
 const copyButton=document.getElementById('standort-kopieren');
+const mapLink=document.getElementById('standort-karte');
 const feedback=document.getElementById('standort-meldung');
 let currentMessage='';
 let preparedGroup='';
@@ -187,7 +188,23 @@ function getTeachers(group){
 }
 function clearPrepared(){
   currentMessage='';preparedGroup='';preparedSlot='';
-  prepared.hidden=true;teamsLink.removeAttribute('href');feedback.textContent='';
+  prepared.hidden=true;teamsLink.removeAttribute('href');mapLink.removeAttribute('href');feedback.textContent='';
+}
+// GPS liefert WGS84 (Breite/Länge). Der swisstopo-Kartenviewer benötigt LV95 (Ost/Nord).
+// Näherungsformeln des Bundesamtes für Landestopografie, Genauigkeit ca. 1 m.
+// https://www.swisstopo.admin.ch/dam/en/sd-web/KLRCX9XIdXDu/ch1903wgs84-EN.pdf
+function wgs84ToLv95(latitude,longitude){
+  const lat=(latitude*3600-169028.66)/10000;
+  const lon=(longitude*3600-26782.5)/10000;
+  const east=2600072.37+211455.93*lon-10938.51*lon*lat-0.36*lon*lat*lat-44.54*lon*lon*lon;
+  const north=1200147.07+308807.95*lat+3745.25*lon*lon+76.63*lat*lat-194.56*lon*lon*lat+119.79*lat*lat*lat;
+  return {east:Math.round(east),north:Math.round(north)};
+}
+function swisstopoLocationUrl(latitude,longitude){
+  const point=wgs84ToLv95(latitude,longitude);
+  const coords=point.east+','+point.north;
+  // Der Marker bleibt bei Weitergabe im Teams-Chat sichtbar.
+  return 'https://map.geo.admin.ch/#/map?lang=de&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&center='+coords+'&z=11&crosshair=marker,'+coords;
 }
 function refresh(){
   const group=select.value;
@@ -259,10 +276,11 @@ locateButton.addEventListener('click',()=>{
   navigator.geolocation.getCurrentPosition(position=>{
     locateButton.disabled=false;
     // Die Position wird ausschliesslich im Browser für die Nachricht verwendet, nicht gespeichert.
-    const lat=position.coords.latitude.toFixed(5);
-    const lon=position.coords.longitude.toFixed(5);
+    const latitude=position.coords.latitude;
+    const longitude=position.coords.longitude;
     const accuracy=Math.round(position.coords.accuracy);
-    const map='https://www.openstreetmap.org/?mlat='+lat+'&mlon='+lon+'#map=17/'+lat+'/'+lon;
+    const map=swisstopoLocationUrl(latitude,longitude);
+    mapLink.href=map;
     const at=new Date().toLocaleString('de-CH',{timeZone:'Europe/Zurich',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
     const isTest=!before.active;
     currentMessage=(isTest?'TEST · Standortmeldung Herbsttag 2026':'Standortmeldung Herbsttag 2026')+'\nGruppe: '+group+'\nZeitpunkt: '+at+' Uhr\nStandort: '+map+'\nGPS-Genauigkeit: ca. '+accuracy+' m'+(isTest?'\nTESTMELDUNG – nicht für den Ernstfall.':'');
@@ -272,7 +290,7 @@ locateButton.addEventListener('click',()=>{
     preparedSlot=before.active?before.id:'';
     preview.textContent='Gruppe '+group+' · '+at+' Uhr. '+(isTest?'TEST-Nachricht':'Standortmeldung')+' für '+teachers.names+' vorbereitet.';
     prepared.hidden=false;
-    feedback.textContent='Standort ermittelt. Jetzt Teams öffnen und die Nachricht dort senden.';
+    feedback.textContent='Standort ermittelt. Den Punkt auf swisstopo prüfen und anschliessend die Nachricht in Teams senden.';
   },error=>{
     locateButton.disabled=false;
     const texts={1:'Standortzugriff verweigert. Bitte in den Browsereinstellungen für diese Seite erlauben.',2:'Standort nicht verfügbar. Prüft GPS und Standortdienste.',3:'Die Standortermittlung hat zu lange gedauert. Erneut versuchen.'};
