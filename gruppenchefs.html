@@ -87,8 +87,25 @@
 .standort-meldung{font-size:15px;margin:10px 0;min-height:1em}
 @media(max-width:600px){.standort-top{grid-template-columns:1fr}.standort-aktionen{flex-direction:column}.standort-button{width:100%}}
 @media print{.standort-aktionen,.standort-vorbereitet,.standort-alarm{display:none!important}}
+
+/* Empfangene Standortmeldung wird aus einer Teams-Nachricht verlinkt. */
+.empfangener-standort{margin:20px 0 26px;scroll-margin-top:16px}
+.empfangener-standort article{border:2px solid #286647;background:#f2fbf5}
+.empfangener-standort h2{margin:0 0 12px}
+.empfangener-standort .standort-aktionen{margin:14px 0}
+@media print{.empfangener-standort{display:none!important}}
 </style></head><body><main><header><div class="eyebrow">Herbsttag · Aargauer Mitte</div><h1>Informationen für Gruppenleitungen und Co-Leitungen</h1></header><aside class="emergency" aria-label="Notfallkontakte"><span class="emergency-title">Notfallkontakte</span>
-<div class="emergency-persons"><div class="emergency-person"><strong>Mario Mazzocco</strong><span class="emergency-role">Notfallkontakt · Organisation</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=mario.mazzocco@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Mario Mazzocco in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div><div class="emergency-person"><strong>Florijan Sinik</strong><span class="emergency-role">Schulleitung (SL)</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=florijan.sinik@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Florijan Sinik in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div></div></aside><div class="role-legend" aria-label="Farbcodierung der Gruppenrollen"><span class="role-pill role-pill--leitung">Gruppenleitung</span><span class="role-pill role-pill--co">Co-Leitung</span></div><nav aria-label="Inhalt" class="jump"><a href="#ablauf">Ablauf</a><a href="#aufgaben">Aufgaben & Regeln</a><a href="#navigation">Material & swisstopo</a><a href="#standortmeldung">Standortmeldung</a><a href="#schluss">Schlussaufgabe</a><a href="#gruppenverantwortung">Gruppenverantwortung</a><a href="#zustaendigkeit">Kontrollposten</a></nav><section id="standortmeldung" aria-labelledby="standort-titel">
+<div class="emergency-persons"><div class="emergency-person"><strong>Mario Mazzocco</strong><span class="emergency-role">Notfallkontakt · Organisation</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=mario.mazzocco@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Mario Mazzocco in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div><div class="emergency-person"><strong>Florijan Sinik</strong><span class="emergency-role">Schulleitung (SL)</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=florijan.sinik@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Florijan Sinik in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div></div></aside><div class="role-legend" aria-label="Farbcodierung der Gruppenrollen"><span class="role-pill role-pill--leitung">Gruppenleitung</span><span class="role-pill role-pill--co">Co-Leitung</span></div><section id="empfangener-standort" class="empfangener-standort" hidden aria-labelledby="empfangener-standort-titel">
+  <h2 id="empfangener-standort-titel">Empfangene Standortmeldung</h2>
+  <article>
+    <p id="empfangener-standort-text">Standortmeldung erhalten.</p>
+    <div class="standort-aktionen">
+      <a id="empfangener-app-link" class="standort-button" href="#">In swisstopo-App öffnen</a>
+      <a id="empfangener-web-link" class="standort-button standort-button-alt" href="#" target="_blank" rel="noopener noreferrer">Alternativ: Standort im Browser anzeigen</a>
+    </div>
+    <p class="note">Auf dem Smartphone muss die swisstopo-App installiert sein. Sollte Teams den App-Start blockieren, diese Seite in Safari oder Chrome öffnen und erneut auf «In swisstopo-App öffnen» tippen.</p>
+  </article>
+</section><nav aria-label="Inhalt" class="jump"><a href="#ablauf">Ablauf</a><a href="#aufgaben">Aufgaben & Regeln</a><a href="#navigation">Material & swisstopo</a><a href="#standortmeldung">Standortmeldung</a><a href="#schluss">Schlussaufgabe</a><a href="#gruppenverantwortung">Gruppenverantwortung</a><a href="#zustaendigkeit">Kontrollposten</a></nav><section id="standortmeldung" aria-labelledby="standort-titel">
 <h2 id="standort-titel">Standortmeldung an eure Lehrpersonen</h2>
 <article class="standort-panel">
 <p>Am <strong>Donnerstag, 22. Oktober 2026</strong> erinnert euch diese Seite zwischen <strong>08:45 und 13:00 Uhr</strong> alle 30 Minuten an eine Standortmeldung. Der Standort wird nur ermittelt, wenn ihr auf die entsprechende Schaltfläche tippt.</p>
@@ -99,7 +116,7 @@
 <div id="standort-hinweis" class="standort-hinweis" role="status" aria-live="polite">Die Erinnerungen beginnen am 22.10.2026 um 08:45 Uhr.</div>
 <div id="standort-alarm" class="standort-alarm" role="status" aria-live="assertive" hidden><strong>Standortmeldung fällig</strong><span id="standort-alarm-zeit"></span><p>Aktuellen Standort ermitteln und an beide verantwortlichen Lehrpersonen übermitteln.</p></div>
 <div class="standort-aktionen"><button type="button" id="standort-aktivieren" class="standort-button standort-button-alt" disabled>Erinnerungen aktivieren</button><button type="button" id="standort-ermitteln" class="standort-button" disabled>Standort ermitteln</button></div>
-<div id="standort-vorbereitet" class="standort-vorbereitet" hidden><p id="standort-vorschau">Die Teams-Nachricht ist vorbereitet.</p><div class="standort-aktionen"><a id="standort-teams" class="standort-button standort-button-teams" href="#" target="_blank" rel="noopener noreferrer">In Teams öffnen und senden</a><a id="standort-karte" class="standort-button standort-button-alt" href="#" target="_blank" rel="noopener noreferrer">Standort auf swisstopo prüfen</a><button type="button" id="standort-kopieren" class="standort-button standort-button-alt">Nachricht kopieren</button></div><p class="note">Teams öffnet einen Chat mit den beiden Lehrpersonen. Die Nachricht wird erst versendet, wenn ihr in Teams auf «Senden» tippt.</p></div>
+<div id="standort-vorbereitet" class="standort-vorbereitet" hidden><p id="standort-vorschau">Die Teams-Nachricht ist vorbereitet.</p><div class="standort-aktionen"><a id="standort-teams" class="standort-button standort-button-teams" href="#" target="_blank" rel="noopener noreferrer">In Teams öffnen und senden</a><a id="standort-karte" class="standort-button standort-button-alt" href="#">Standort in swisstopo-App öffnen</a><a id="standort-webkarte" class="standort-button standort-button-alt" href="#" target="_blank" rel="noopener noreferrer">Webkarte als Alternative</a><button type="button" id="standort-kopieren" class="standort-button standort-button-alt">Nachricht kopieren</button></div><p class="note">Teams öffnet einen Chat mit den beiden Lehrpersonen. Die Nachricht wird erst versendet, wenn ihr in Teams auf «Senden» tippt.</p></div>
 <p id="standort-meldung" class="standort-meldung" aria-live="polite"></p>
 <p class="note">Vor dem 22. Oktober erstellt «Standort ermitteln» ausschliesslich eine mit <strong>TEST</strong> gekennzeichnete Nachricht. Die Gruppenwahl wird auf diesem Gerät gespeichert, nicht der GPS-Standort.</p>
 <p class="note">Erinnerungen funktionieren nur, solange diese Webseite im Browser geöffnet und aktiv ist. Bei gesperrtem Smartphone oder während der Nutzung von swisstopo können sie ausbleiben. Der Standortzugriff erfordert eine einmalige Browserfreigabe und eine HTTPS-Verbindung.</p>
@@ -155,6 +172,7 @@ const preview=document.getElementById('standort-vorschau');
 const teamsLink=document.getElementById('standort-teams');
 const copyButton=document.getElementById('standort-kopieren');
 const mapLink=document.getElementById('standort-karte');
+const webMapLink=document.getElementById('standort-webkarte');
 const feedback=document.getElementById('standort-meldung');
 let currentMessage='';
 let preparedGroup='';
@@ -188,7 +206,7 @@ function getTeachers(group){
 }
 function clearPrepared(){
   currentMessage='';preparedGroup='';preparedSlot='';
-  prepared.hidden=true;teamsLink.removeAttribute('href');mapLink.removeAttribute('href');feedback.textContent='';
+  prepared.hidden=true;teamsLink.removeAttribute('href');mapLink.removeAttribute('href');webMapLink.removeAttribute('href');feedback.textContent='';
 }
 // GPS liefert WGS84 (Breite/Länge). Der swisstopo-Kartenviewer benötigt LV95 (Ost/Nord).
 // Näherungsformeln des Bundesamtes für Landestopografie, Genauigkeit ca. 1 m.
@@ -200,12 +218,41 @@ function wgs84ToLv95(latitude,longitude){
   const north=1200147.07+308807.95*lat+3745.25*lon*lon+76.63*lat*lat-194.56*lon*lon*lat+119.79*lat*lat*lat;
   return {east:Math.round(east),north:Math.round(north)};
 }
-function swisstopoLocationUrl(latitude,longitude){
+function swisstopoWebUrl(latitude,longitude){
   const point=wgs84ToLv95(latitude,longitude);
   const coords=point.east+','+point.north;
-  // Der Marker bleibt bei Weitergabe im Teams-Chat sichtbar.
   return 'https://map.geo.admin.ch/#/map?lang=de&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe&center='+coords+'&z=11&crosshair=marker,'+coords;
 }
+// swisstopo dokumentiert das App-URL-Schema für Android und iOS ausdrücklich.
+// https://www.swisstopo.admin.ch/de/inhalte-und-funktionen-swisstopo-app
+function swisstopoAppUrl(latitude,longitude){
+  return 'swisstopo://poi?lat='+Number(latitude).toFixed(7)+'&lon='+Number(longitude).toFixed(7);
+}
+// Teams verlinkt HTTPS-Adressen verlässlicher als eigene App-Schemas.
+// Der Fragment-Teil enthält den Standort, wird nicht an GitHub Pages übertragen.
+function teamsCompatibleLocationUrl(group,latitude,longitude){
+  const u=new URL(window.location.href);
+  u.hash='position='+encodeURIComponent(Number(latitude).toFixed(7)+','+Number(longitude).toFixed(7))+'&gruppe='+encodeURIComponent(group);
+  return u.href;
+}
+function showReceivedLocation(){
+  const params=new URLSearchParams(window.location.hash.replace(/^#/,''));
+  const raw=params.get('position');
+  const group=params.get('gruppe')||'';
+  if(!raw||!/^[a-e][12]$/.test(group))return;
+  const parts=raw.split(',');
+  if(parts.length!==2)return;
+  const latitude=Number(parts[0]);
+  const longitude=Number(parts[1]);
+  if(!Number.isFinite(latitude)||!Number.isFinite(longitude)||latitude<45||latitude>48.5||longitude<5||longitude>11)return;
+  const panel=document.getElementById('empfangener-standort');
+  document.getElementById('empfangener-standort-text').textContent='Standort der Gruppe '+group+' · GPS-Koordinaten: '+latitude.toFixed(6)+', '+longitude.toFixed(6);
+  document.getElementById('empfangener-app-link').href=swisstopoAppUrl(latitude,longitude);
+  document.getElementById('empfangener-web-link').href=swisstopoWebUrl(latitude,longitude);
+  panel.hidden=false;
+  panel.scrollIntoView({block:'start'});
+}
+window.addEventListener('hashchange',showReceivedLocation);
 function refresh(){
   const group=select.value;
   const teachers=getTeachers(group);
@@ -279,18 +326,21 @@ locateButton.addEventListener('click',()=>{
     const latitude=position.coords.latitude;
     const longitude=position.coords.longitude;
     const accuracy=Math.round(position.coords.accuracy);
-    const map=swisstopoLocationUrl(latitude,longitude);
-    mapLink.href=map;
+    const appUrl=swisstopoAppUrl(latitude,longitude);
+    const webUrl=swisstopoWebUrl(latitude,longitude);
+    const teamMapUrl=teamsCompatibleLocationUrl(group,latitude,longitude);
+    mapLink.href=appUrl;
+    webMapLink.href=webUrl;
     const at=new Date().toLocaleString('de-CH',{timeZone:'Europe/Zurich',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
     const isTest=!before.active;
-    currentMessage=(isTest?'TEST · Standortmeldung Herbsttag 2026':'Standortmeldung Herbsttag 2026')+'\nGruppe: '+group+'\nZeitpunkt: '+at+' Uhr\nStandort: '+map+'\nGPS-Genauigkeit: ca. '+accuracy+' m'+(isTest?'\nTESTMELDUNG – nicht für den Ernstfall.':'');
+    currentMessage=(isTest?'TEST · Standortmeldung Herbsttag 2026':'Standortmeldung Herbsttag 2026')+'\nGruppe: '+group+'\nZeitpunkt: '+at+' Uhr\nStandort öffnen (swisstopo-App): '+teamMapUrl+'\nApp-Direktlink: '+appUrl+'\nGPS-Genauigkeit: ca. '+accuracy+' m'+(isTest?'\nTESTMELDUNG – nicht für den Ernstfall.':'');
     const link='https://teams.microsoft.com/l/chat/0/0?users='+teachers.addresses.join(',')+'&message='+encodeURIComponent(currentMessage);
     teamsLink.href=link;
     preparedGroup=group;
     preparedSlot=before.active?before.id:'';
     preview.textContent='Gruppe '+group+' · '+at+' Uhr. '+(isTest?'TEST-Nachricht':'Standortmeldung')+' für '+teachers.names+' vorbereitet.';
     prepared.hidden=false;
-    feedback.textContent='Standort ermittelt. Den Punkt auf swisstopo prüfen und anschliessend die Nachricht in Teams senden.';
+    feedback.textContent='Standort ermittelt. Die swisstopo-App kann jetzt direkt geöffnet werden. Anschliessend die Nachricht in Teams senden.';
   },error=>{
     locateButton.disabled=false;
     const texts={1:'Standortzugriff verweigert. Bitte in den Browsereinstellungen für diese Seite erlauben.',2:'Standort nicht verfügbar. Prüft GPS und Standortdienste.',3:'Die Standortermittlung hat zu lange gedauert. Erneut versuchen.'};
@@ -312,6 +362,7 @@ copyButton.addEventListener('click',async()=>{
     feedback.textContent='Nachricht kopiert. In Teams in den Chat der zuständigen Lehrpersonen einfügen und senden.';
   }catch(e){feedback.textContent='Automatisches Kopieren nicht möglich. Bitte Teams-Link verwenden.';}
 });
+showReceivedLocation();
 select.value=getSaved(GROUP_KEY);
 if(!getTeachers(select.value))select.value='';
 refresh();
