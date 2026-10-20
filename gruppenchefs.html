@@ -64,8 +64,47 @@
 .emergency .ambulance-number:focus-visible{outline:3px solid #7c211c;outline-offset:3px}
 @media(max-width:580px){.emergency .emergency-persons{grid-template-columns:1fr}.emergency .emergency-medical{align-items:stretch}.emergency .ambulance-number{width:100%}}
 @media print{.emergency .emergency-medical,.emergency .emergency-person{break-inside:avoid}.emergency .ambulance-number{background:#fff;color:#ad3027;border:2px solid #ad3027}.emergency .emergency-person .contact-actions{display:none}}
+
+/* Freiwillige Standortmeldung: sichtbar nur als in-page-Erinnerung bei aktiver Seite */
+#standortmeldung{scroll-margin-top:20px}
+.standort-panel{border-top:4px solid #174436}
+.standort-top{display:grid;grid-template-columns: minmax(190px,0.8fr) minmax(240px,1.2fr);gap:16px;align-items:start;margin:18px 0}
+.standort-input{min-width:0}.standort-input label,.standort-label{display:block;margin:0 0 6px;font-size:15px;font-weight:750}
+#standort-gruppe{display:block;width:100%;margin:0;font-size:17px;min-height:48px}
+#standort-empfaenger{margin:6px 0 0;line-height:1.4;font-size:16px}
+.standort-hinweis{padding:13px 15px;background:#eff5f1;border:1px solid #c4d7ca;border-radius:8px;font-size:15px}
+.standort-alarm{margin:12px 0 0;padding:16px;background:#fff3cc;border:2px solid #b8891c;border-radius:9px;color:#4f390b}
+.standort-alarm strong{display:block;font-size:19px}.standort-alarm span{font-size:15px}.standort-alarm p{margin:8px 0 0}
+.standort-aktionen{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 12px}
+.standort-button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:10px 16px;border:1px solid #174436;border-radius:8px;background:#174436;color:#fff;font:700 16px/1.3 system-ui,sans-serif;cursor:pointer;text-decoration:none;text-align:center}
+.standort-button:hover,.standort-button:focus-visible{background:#24664d;color:#fff;text-decoration:none}
+.standort-button:focus-visible{outline:3px solid #769f85;outline-offset:2px}
+.standort-button-alt{background:#fff;color:#174436}.standort-button-alt:hover,.standort-button-alt:focus-visible{background:#eef5f0;color:#174436}
+.standort-button:disabled{opacity:.48;cursor:not-allowed}
+.standort-vorbereitet{background:#eff6f1;border:1px solid #a4c3ab;border-radius:8px;padding:12px 15px;margin-top:12px}
+.standort-vorbereitet #standort-vorschau{margin:0;font-size:15px;overflow-wrap:anywhere;white-space:pre-line}
+.standort-vorbereitet .standort-aktionen{margin:12px 0}
+.standort-meldung{font-size:15px;margin:10px 0;min-height:1em}
+@media(max-width:600px){.standort-top{grid-template-columns:1fr}.standort-aktionen{flex-direction:column}.standort-button{width:100%}}
+@media print{.standort-aktionen,.standort-vorbereitet,.standort-alarm{display:none!important}}
 </style></head><body><main><header><div class="eyebrow">Herbsttag · Aargauer Mitte</div><h1>Informationen für Gruppenleitungen und Co-Leitungen</h1></header><aside class="emergency" aria-label="Notfallkontakte"><span class="emergency-title">Notfallkontakte</span>
-<div class="emergency-persons"><div class="emergency-person"><strong>Mario Mazzocco</strong><span class="emergency-role">Notfallkontakt · Organisation</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=mario.mazzocco@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Mario Mazzocco in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div><div class="emergency-person"><strong>Florijan Sinik</strong><span class="emergency-role">Schulleitung (SL)</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=florijan.sinik@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Florijan Sinik in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div></div></aside><div class="role-legend" aria-label="Farbcodierung der Gruppenrollen"><span class="role-pill role-pill--leitung">Gruppenleitung</span><span class="role-pill role-pill--co">Co-Leitung</span></div><nav aria-label="Inhalt" class="jump"><a href="#ablauf">Ablauf</a><a href="#aufgaben">Aufgaben & Regeln</a><a href="#navigation">Material & swisstopo</a><a href="#schluss">Schlussaufgabe</a><a href="#gruppenverantwortung">Gruppenverantwortung</a><a href="#zustaendigkeit">Kontrollposten</a></nav><section id="ablauf"><h2>Ablauf · Donnerstag, 22. Oktober 2026</h2><article><div class="post"><strong>08:45 Uhr</strong> · Start der ersten Gruppen</div><div class="post"><strong>09:15 Uhr</strong> · Start der zweiten Gruppen</div><div class="post"><strong>Am Ziel</strong> · Bei der zuständigen Lehrperson melden und die Schlussaufgabe lösen</div><div class="post"><strong>15:07 Uhr</strong> · Gemeinsame Zugfahrt ab Wildegg, Gleis 6</div><div class="post"><strong>15:13 Uhr</strong> · Ankunft Aarau, Gleis 4</div><p class="note">Rückfahrt gemäss Organisationsplan.</p></article></section><section id="aufgaben"><h2>Eure Aufgaben & Regeln</h2><article><p>Ihr führt eure Gruppe selbstständig vom <strong>Schulzentrum Stock</strong> zur <strong>Aargauer Mitte</strong>.</p><ul><li>Die Gruppe zusammenhalten und gemeinsam sicher unterwegs sein.</li><li>Die eigene Route kennen, das Routenblatt mitführen und die Gruppe bei der Orientierung unterstützen.</li><li>Alle Kontrollpunkte vollständig und in der richtigen Reihenfolge erreichen.</li><li>Regelmässig prüfen, ob ihr noch auf der richtigen Route seid.</li><li>Bei Unsicherheit zuerst Karte, Routenblatt und Standort genau prüfen, statt nach Gefühl weiterzugehen.</li><li>Auf den vorgegebenen Wegen bleiben und Anweisungen einhalten.</li><li>Die Zeit im Auge behalten und unnötig lange Pausen vermeiden.</li><li>Bei Problemen oder besonderen Situationen die zuständige Lehrperson informieren.</li><li>Am Ziel zusammenbleiben, sich melden und die Schlussaufgabe gemeinsam organisieren.</li></ul><p>Ihr müsst nicht alles alleine machen: Orientierung und Aufgaben sind Sache der ganzen Gruppe. Gruppenleitung und Co-Leitung behalten gemeinsam den Überblick.</p></article></section><section id="navigation"><h2>Material & Orientierung</h2><article><p><strong>Routenblatt = verbindliche Wegführung.</strong><br><strong>swisstopo + GPX = Standortkontrolle.</strong></p><p>Die GPX-Dateien enthalten Start, Ziel, Kontroll- und Orientierungspunkte, aber keine durchgehende Weglinie. Nicht direkt auf den nächsten Punkt zulaufen und keine Abkürzungen über Felder, Strassen, Flüsse, Bahnlinien oder andere Hindernisse nehmen.</p><div class="app-download" aria-labelledby="app-download-heading"><h3 id="app-download-heading">swisstopo-App herunterladen</h3><div class="app-links"><a href="https://apps.apple.com/ch/app/swisstopo/id1505986543" target="_blank" rel="noopener noreferrer" aria-label="swisstopo für iOS im Apple App Store herunterladen">Für iPhone (iOS) · App Store</a><a href="https://play.google.com/store/apps/details?id=ch.admin.swisstopo&amp;hl=de" target="_blank" rel="noopener noreferrer" aria-label="swisstopo für Android bei Google Play herunterladen">Für Android · Google Play</a></div></div><h3>Vor dem Start</h3><ol><li>swisstopo-App installieren und Standortfreigabe aktivieren.</li><li>Den Routen-QR-Code auf der eigenen Karte scannen. Alternativ die GPX-Datei öffnen und über «Teilen» oder «Öffnen mit» an swisstopo übergeben.</li><li>Prüfen, ob die Punkte und der eigene Standort auf der Karte sichtbar sind.</li><li>Routenblatt mitführen und das Smartphone ausreichend laden.</li></ol><p>Unterwegs regelmässig Routenblatt, Standort und nächsten Kontrollpunkt vergleichen. Die vorgegebenen Wege und Anweisungen einhalten.</p></article></section><section id="schluss"><h2>Schlussaufgabe · Aargauer Mitte</h2><article><p>Die Gruppe bleibt nach der Ankunft zusammen und meldet sich bei ihrer zuständigen Lehrperson.</p><h3>Bambusstock gemeinsam absenken</h3><ul><li>Einen etwa <strong>2 m langen Bambusstock</strong> gemeinsam kontrolliert bis auf den Boden absenken.</li><li>Alle berühren den Stock <strong>nur von unten mit einem Finger</strong>.</li><li>Alle Finger müssen ständig Kontakt halten. Geht der Kontakt verloren, beginnt die Gruppe nochmals.</li><li>Zeitlimit: <strong>5 Minuten</strong>.</li><li>Die Lehrperson überwacht die Aufgabe, greift aber nicht ein.</li><li>Die schnellste Gruppe erhält einen Preis.</li></ul><p>Gruppenleitung und Co-Leitung organisieren die Aufgabe und sorgen dafür, dass alle mitmachen. Erst nach der Schlussaufgabe ist die Route abgeschlossen; die gemeinsame Rückfahrt folgt gemäss Ablauf.</p></article></section><div class="filter" id="zustaendigkeit"><label for="route">Eure Route</label><select id="route"><option value="all">Alle Routen</option><option value="a">Route a · a1, a2</option><option value="b">Route b · b1, b2</option><option value="c">Route c · c1, c2</option><option value="d">Route d · d1, d2</option><option value="e">Route e · e1, e2</option></select></div><section id="gruppenverantwortung" aria-labelledby="gruppenverantwortung-titel">
+<div class="emergency-persons"><div class="emergency-person"><strong>Mario Mazzocco</strong><span class="emergency-role">Notfallkontakt · Organisation</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=mario.mazzocco@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Mario Mazzocco in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div><div class="emergency-person"><strong>Florijan Sinik</strong><span class="emergency-role">Schulleitung (SL)</span><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=florijan.sinik@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Florijan Sinik in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Teams-Anruf</span></a></div></div></div></aside><div class="role-legend" aria-label="Farbcodierung der Gruppenrollen"><span class="role-pill role-pill--leitung">Gruppenleitung</span><span class="role-pill role-pill--co">Co-Leitung</span></div><nav aria-label="Inhalt" class="jump"><a href="#ablauf">Ablauf</a><a href="#aufgaben">Aufgaben & Regeln</a><a href="#navigation">Material & swisstopo</a><a href="#standortmeldung">Standortmeldung</a><a href="#schluss">Schlussaufgabe</a><a href="#gruppenverantwortung">Gruppenverantwortung</a><a href="#zustaendigkeit">Kontrollposten</a></nav><section id="standortmeldung" aria-labelledby="standort-titel">
+<h2 id="standort-titel">Standortmeldung an eure Lehrpersonen</h2>
+<article class="standort-panel">
+<p>Am <strong>Donnerstag, 22. Oktober 2026</strong> erinnert euch diese Seite zwischen <strong>08:45 und 13:00 Uhr</strong> alle 30 Minuten an eine Standortmeldung. Der Standort wird nur ermittelt, wenn ihr auf die entsprechende Schaltfläche tippt.</p>
+<div class="standort-top">
+<div class="standort-input"><label for="standort-gruppe">Eure Gruppe</label><select id="standort-gruppe" autocomplete="off"><option value="">Gruppe auswählen</option><option value="a1">a1</option><option value="a2">a2</option><option value="b1">b1</option><option value="b2">b2</option><option value="c1">c1</option><option value="c2">c2</option><option value="d1">d1</option><option value="d2">d2</option><option value="e1">e1</option><option value="e2">e2</option></select></div>
+<div class="standort-input"><span class="standort-label">Zuständige Lehrpersonen</span><p id="standort-empfaenger">Bitte zuerst die Gruppe auswählen.</p></div>
+</div>
+<div id="standort-hinweis" class="standort-hinweis" role="status" aria-live="polite">Die Erinnerungen beginnen am 22.10.2026 um 08:45 Uhr.</div>
+<div id="standort-alarm" class="standort-alarm" role="status" aria-live="assertive" hidden><strong>Standortmeldung fällig</strong><span id="standort-alarm-zeit"></span><p>Aktuellen Standort ermitteln und an beide verantwortlichen Lehrpersonen übermitteln.</p></div>
+<div class="standort-aktionen"><button type="button" id="standort-aktivieren" class="standort-button standort-button-alt" disabled>Erinnerungen aktivieren</button><button type="button" id="standort-ermitteln" class="standort-button" disabled>Standort ermitteln</button></div>
+<div id="standort-vorbereitet" class="standort-vorbereitet" hidden><p id="standort-vorschau">Die Teams-Nachricht ist vorbereitet.</p><div class="standort-aktionen"><a id="standort-teams" class="standort-button standort-button-teams" href="#" target="_blank" rel="noopener noreferrer">In Teams öffnen und senden</a><button type="button" id="standort-kopieren" class="standort-button standort-button-alt">Nachricht kopieren</button></div><p class="note">Teams öffnet einen Chat mit den beiden Lehrpersonen. Die Nachricht wird erst versendet, wenn ihr in Teams auf «Senden» tippt.</p></div>
+<p id="standort-meldung" class="standort-meldung" aria-live="polite"></p>
+<p class="note">Vor dem 22. Oktober erstellt «Standort ermitteln» ausschliesslich eine mit <strong>TEST</strong> gekennzeichnete Nachricht. Die Gruppenwahl wird auf diesem Gerät gespeichert, nicht der GPS-Standort.</p>
+<p class="note">Erinnerungen funktionieren nur, solange diese Webseite im Browser geöffnet und aktiv ist. Bei gesperrtem Smartphone oder während der Nutzung von swisstopo können sie ausbleiben. Der Standortzugriff erfordert eine einmalige Browserfreigabe und eine HTTPS-Verbindung.</p>
+</article>
+</section><section id="ablauf"><h2>Ablauf · Donnerstag, 22. Oktober 2026</h2><article><div class="post"><strong>08:45 Uhr</strong> · Start der ersten Gruppen</div><div class="post"><strong>09:15 Uhr</strong> · Start der zweiten Gruppen</div><div class="post"><strong>Am Ziel</strong> · Bei der zuständigen Lehrperson melden und die Schlussaufgabe lösen</div><div class="post"><strong>15:07 Uhr</strong> · Gemeinsame Zugfahrt ab Wildegg, Gleis 6</div><div class="post"><strong>15:13 Uhr</strong> · Ankunft Aarau, Gleis 4</div><p class="note">Rückfahrt gemäss Organisationsplan.</p></article></section><section id="aufgaben"><h2>Eure Aufgaben & Regeln</h2><article><p>Ihr führt eure Gruppe selbstständig vom <strong>Schulzentrum Stock</strong> zur <strong>Aargauer Mitte</strong>.</p><ul><li>Die Gruppe zusammenhalten und gemeinsam sicher unterwegs sein.</li><li>Die eigene Route kennen, das Routenblatt mitführen und die Gruppe bei der Orientierung unterstützen.</li><li>Alle Kontrollpunkte vollständig und in der richtigen Reihenfolge erreichen.</li><li>Regelmässig prüfen, ob ihr noch auf der richtigen Route seid.</li><li>Bei Unsicherheit zuerst Karte, Routenblatt und Standort genau prüfen, statt nach Gefühl weiterzugehen.</li><li>Auf den vorgegebenen Wegen bleiben und Anweisungen einhalten.</li><li>Die Zeit im Auge behalten und unnötig lange Pausen vermeiden.</li><li>Bei Problemen oder besonderen Situationen die zuständige Lehrperson informieren.</li><li>Am Ziel zusammenbleiben, sich melden und die Schlussaufgabe gemeinsam organisieren.</li></ul><p>Ihr müsst nicht alles alleine machen: Orientierung und Aufgaben sind Sache der ganzen Gruppe. Gruppenleitung und Co-Leitung behalten gemeinsam den Überblick.</p></article></section><section id="navigation"><h2>Material & Orientierung</h2><article><p><strong>Routenblatt = verbindliche Wegführung.</strong><br><strong>swisstopo + GPX = Standortkontrolle.</strong></p><p>Die GPX-Dateien enthalten Start, Ziel, Kontroll- und Orientierungspunkte, aber keine durchgehende Weglinie. Nicht direkt auf den nächsten Punkt zulaufen und keine Abkürzungen über Felder, Strassen, Flüsse, Bahnlinien oder andere Hindernisse nehmen.</p><div class="app-download" aria-labelledby="app-download-heading"><h3 id="app-download-heading">swisstopo-App herunterladen</h3><div class="app-links"><a href="https://apps.apple.com/ch/app/swisstopo/id1505986543" target="_blank" rel="noopener noreferrer" aria-label="swisstopo für iOS im Apple App Store herunterladen">Für iPhone (iOS) · App Store</a><a href="https://play.google.com/store/apps/details?id=ch.admin.swisstopo&amp;hl=de" target="_blank" rel="noopener noreferrer" aria-label="swisstopo für Android bei Google Play herunterladen">Für Android · Google Play</a></div></div><h3>Vor dem Start</h3><ol><li>swisstopo-App installieren und Standortfreigabe aktivieren.</li><li>Den Routen-QR-Code auf der eigenen Karte scannen. Alternativ die GPX-Datei öffnen und über «Teilen» oder «Öffnen mit» an swisstopo übergeben.</li><li>Prüfen, ob die Punkte und der eigene Standort auf der Karte sichtbar sind.</li><li>Routenblatt mitführen und das Smartphone ausreichend laden.</li></ol><p>Unterwegs regelmässig Routenblatt, Standort und nächsten Kontrollpunkt vergleichen. Die vorgegebenen Wege und Anweisungen einhalten.</p></article></section><section id="schluss"><h2>Schlussaufgabe · Aargauer Mitte</h2><article><p>Die Gruppe bleibt nach der Ankunft zusammen und meldet sich bei ihrer zuständigen Lehrperson.</p><h3>Bambusstock gemeinsam absenken</h3><ul><li>Einen etwa <strong>2 m langen Bambusstock</strong> gemeinsam kontrolliert bis auf den Boden absenken.</li><li>Alle berühren den Stock <strong>nur von unten mit einem Finger</strong>.</li><li>Alle Finger müssen ständig Kontakt halten. Geht der Kontakt verloren, beginnt die Gruppe nochmals.</li><li>Zeitlimit: <strong>5 Minuten</strong>.</li><li>Die Lehrperson überwacht die Aufgabe, greift aber nicht ein.</li><li>Die schnellste Gruppe erhält einen Preis.</li></ul><p>Gruppenleitung und Co-Leitung organisieren die Aufgabe und sorgen dafür, dass alle mitmachen. Erst nach der Schlussaufgabe ist die Route abgeschlossen; die gemeinsame Rückfahrt folgt gemäss Ablauf.</p></article></section><div class="filter" id="zustaendigkeit"><label for="route">Eure Route</label><select id="route"><option value="all">Alle Routen</option><option value="a">Route a · a1, a2</option><option value="b">Route b · b1, b2</option><option value="c">Route c · c1, c2</option><option value="d">Route d · d1, d2</option><option value="e">Route e · e1, e2</option></select></div><section id="gruppenverantwortung" aria-labelledby="gruppenverantwortung-titel">
 <h2 id="gruppenverantwortung-titel">Welche Lehrpersonen sind für eure Gruppe verantwortlich?</h2>
 <p class="note">Für jede Route sind zwei Lehrpersonen gemeinsam für beide Gruppen zuständig. Bei Fragen oder Problemen kontaktiert ihr eine dieser Lehrpersonen. Die Kontrollposten weiter unten werden teilweise von anderen Lehrpersonen betreut.</p>
 <div id="responsibility-cards"><article class="responsibility-card" data-route="a">
@@ -95,4 +134,170 @@
 <article><h3>Frau Niggli · Frau Rutishauser</h3><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=anna.niggli@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Anna Niggli in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Anna Niggli<small>Teams-Anruf</small></span></a><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=monika.rutishauser@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Monika Rutishauser in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Monika Rutishauser<small>Teams-Anruf</small></span></a></div><div class="post" data-routes="a"><p>Posten 2 · Rupperswil Höhe 398</p><div class="groups">Gruppen a1, a2</div></div><div class="post" data-routes="ab"><p>Posten 2 · Rupperswil Eisenbahnbrücke</p><div class="groups">Gruppen a1, a2, b1, b2</div></div></article>
 <article><h3>Frau Benz · Herr Zenger</h3><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=sabine.benz@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Sabine Benz in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Sabine Benz<small>Teams-Anruf</small></span></a><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=mark.zenger@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Mark Zenger in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Mark Zenger<small>Teams-Anruf</small></span></a></div><div class="post" data-routes="cde"><p>Posten 2 · Rupperswil Kraftwerk</p><div class="groups">Gruppen c1, c2, d1, d2, e1, e2</div></div><div class="post" data-routes="c"><p>Posten 3 · Länzert-Feld</p><div class="groups">Gruppen c1, c2</div></div></article>
 <article><h3>Herr Werthmüller · Herr Waber</h3><div class="contact-actions"><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=adrian.werthmueller@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Adrian Werthmüller in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Adrian Werthmüller<small>Teams-Anruf</small></span></a><a class="call-link" href="https://teams.microsoft.com/l/call/0/0?users=levi.waber@ksab.ch" target="_blank" rel="noopener noreferrer" aria-label="Levi Waber in Teams anrufen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.81a2 2 0 0 1-.45 2.11L8.1 8.83a16 16 0 0 0 7.07 7.07l1.19-1.19a2 2 0 0 1 2.11-.45c.9.32 1.85.54 2.81.66A2 2 0 0 1 22 16.92z"/></svg><span>Levi Waber<small>Teams-Anruf</small></span></a></div><div class="post" data-routes="abcde"><p>Posten 1 · Bibersteiner Aarebrücke</p><div class="groups">Alle Gruppen · a1 bis e2</div></div><div class="post" data-routes="ab"><p>Posten 3 · Länzert Brücke Zubringer zur T5</p><div class="groups">Gruppen a1, a2, b1, b2</div></div></article>
-</section><footer>Herbsttag Aargauer Mitte · Stand: 16. Oktober 2026</footer></main><script>document.querySelector('#route').addEventListener('change',function(){const route=this.value;document.querySelectorAll('#posts .post').forEach(p=>p.hidden=route!=='all'&&!p.dataset.routes.includes(route));document.querySelectorAll('#posts article').forEach(a=>a.hidden=Array.from(a.querySelectorAll('.post')).every(p=>p.hidden));document.querySelectorAll('#responsibility-cards .responsibility-card').forEach(a=>a.hidden=route!=='all'&&a.dataset.route!==route);});</script></body></html>
+</section><footer>Herbsttag Aargauer Mitte · Stand: 16. Oktober 2026</footer></main><script>document.querySelector('#route').addEventListener('change',function(){const route=this.value;document.querySelectorAll('#posts .post').forEach(p=>p.hidden=route!=='all'&&!p.dataset.routes.includes(route));document.querySelectorAll('#posts article').forEach(a=>a.hidden=Array.from(a.querySelectorAll('.post')).every(p=>p.hidden));document.querySelectorAll('#responsibility-cards .responsibility-card').forEach(a=>a.hidden=route!=='all'&&a.dataset.route!==route);});</script><script>
+(function(){
+'use strict';
+const EVENT_DATE='2026-10-22';
+const FIRST_MINUTE=8*60+45;
+const END_MINUTE=13*60;
+const INTERVAL_MINUTES=30;
+const GROUP_KEY='herbsttag26-standort-gruppe';
+const ACTIVE_KEY='herbsttag26-erinnerung-an';
+const select=document.getElementById('standort-gruppe');
+const recipient=document.getElementById('standort-empfaenger');
+const information=document.getElementById('standort-hinweis');
+const alarm=document.getElementById('standort-alarm');
+const alarmTime=document.getElementById('standort-alarm-zeit');
+const activateButton=document.getElementById('standort-aktivieren');
+const locateButton=document.getElementById('standort-ermitteln');
+const prepared=document.getElementById('standort-vorbereitet');
+const preview=document.getElementById('standort-vorschau');
+const teamsLink=document.getElementById('standort-teams');
+const copyButton=document.getElementById('standort-kopieren');
+const feedback=document.getElementById('standort-meldung');
+let currentMessage='';
+let preparedGroup='';
+let preparedSlot='';
+let handledSlot='';
+let lastAlertSlot='';
+function getSaved(key){try{return localStorage.getItem(key)||'';}catch(e){return '';}}
+function save(key,value){try{localStorage.setItem(key,value);}catch(e){}}
+function swissNow(date){
+  const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Zurich',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(date);
+  const v=Object.fromEntries(parts.map(p=>[p.type,p.value]));
+  return {date:v.year+'-'+v.month+'-'+v.day,minute:Number(v.hour)*60+Number(v.minute),hour:Number(v.hour),minutes:Number(v.minute)};
+}
+function clock(minutes){return String(Math.floor(minutes/60)).padStart(2,'0')+':'+String(minutes%60).padStart(2,'0');}
+function getSlot(){
+  const now=swissNow(new Date());
+  const active=now.date===EVENT_DATE&&now.minute>=FIRST_MINUTE&&now.minute<END_MINUTE;
+  const slot=active?Math.floor((now.minute-FIRST_MINUTE)/INTERVAL_MINUTES):-1;
+  return {active,slot,id:EVENT_DATE+'-'+slot,start:FIRST_MINUTE+slot*INTERVAL_MINUTES,now};
+}
+function getTeachers(group){
+  if(!/^[a-e][12]$/.test(group))return null;
+  const card=document.querySelector('#responsibility-cards .responsibility-card[data-route="'+group.charAt(0)+'"]');
+  if(!card)return null;
+  const addresses=Array.from(card.querySelectorAll('a.call-link')).map(a=>{
+    try{return new URL(a.href).searchParams.get('users');}catch(e){return null;}
+  }).filter(Boolean);
+  const names=card.querySelector('.responsibility-names');
+  if(addresses.length!==2||!names)return null;
+  return {addresses,names:names.textContent.trim()};
+}
+function clearPrepared(){
+  currentMessage='';preparedGroup='';preparedSlot='';
+  prepared.hidden=true;teamsLink.removeAttribute('href');feedback.textContent='';
+}
+function refresh(){
+  const group=select.value;
+  const teachers=getTeachers(group);
+  recipient.textContent=teachers?teachers.names:'Bitte zuerst die Gruppe auswählen.';
+  locateButton.disabled=!teachers;
+  activateButton.disabled=!teachers;
+  const enrolled=getSaved(ACTIVE_KEY)==='1';
+  activateButton.textContent=enrolled?'Erinnerungen deaktivieren':'Erinnerungen aktivieren';
+  const slot=getSlot();
+  const completed=getSaved('herbsttag26-angezeigt-'+group)===slot.id;
+  if(slot.active){
+    if(!enrolled){
+      information.textContent='Zeitraum aktiv: Erinnerungen für diese Gruppe sind noch nicht eingeschaltet.';
+    }else if(completed){
+      information.textContent='Teams-Nachricht für '+clock(slot.start)+' Uhr geöffnet. Bitte prüfen, ob sie in Teams tatsächlich gesendet wurde.';
+    }else{
+      information.textContent='Erinnerungen aktiv. Nächste Standortmeldung: '+clock(slot.start)+' Uhr.';
+    }
+    const isDue=Boolean(teachers&&enrolled&&!completed);
+    alarm.hidden=!isDue;
+    if(isDue){
+      alarmTime.textContent='Gruppe '+group+' · '+clock(slot.start)+' Uhr';
+      const alertKey=group+'/'+slot.id;
+      if(lastAlertSlot!==alertKey){
+        lastAlertSlot=alertKey;
+        if(document.visibilityState==='visible'&&navigator.vibrate){try{navigator.vibrate([130,100,130]);}catch(e){}}
+        document.title='Standortmeldung fällig · Herbsttag';
+      }
+    }else{document.title='Gruppenleitungen und Co-Leitungen · Herbsttag Aargauer Mitte';}
+  }else{
+    alarm.hidden=true;
+    document.title='Gruppenleitungen und Co-Leitungen · Herbsttag Aargauer Mitte';
+    if(slot.now.date<EVENT_DATE){
+      information.textContent=enrolled?'Erinnerungen eingeschaltet. Start am Donnerstag, 22.10.2026, um 08:45 Uhr. Bis dahin sind nur TEST-Nachrichten möglich.':'Die Erinnerungen starten am Donnerstag, 22.10.2026, um 08:45 Uhr. Die Standortfunktion kann vorher getestet werden.';
+    }else if(slot.now.date===EVENT_DATE&&slot.now.minute<FIRST_MINUTE){
+      information.textContent='Heute um 08:45 Uhr beginnen die Erinnerungen. Der Standorttest ist bis dahin möglich.';
+    }else{information.textContent='Der Zeitraum für Standorterinnerungen ist beendet. Es werden keine weiteren Erinnerungen angezeigt.';}
+  }
+  if(!slot.active){locateButton.textContent='Standort-Test vorbereiten';}
+  else{locateButton.textContent='Aktuellen Standort ermitteln';}
+}
+select.addEventListener('change',()=>{
+  const group=select.value;
+  save(GROUP_KEY,group);
+  save(ACTIVE_KEY,'0');
+  clearPrepared();
+  lastAlertSlot='';
+  refresh();
+});
+activateButton.addEventListener('click',()=>{
+  if(!getTeachers(select.value))return;
+  const enrolling=getSaved(ACTIVE_KEY)!=='1';
+  save(ACTIVE_KEY,enrolling?'1':'0');
+  lastAlertSlot='';
+  refresh();
+  feedback.textContent=enrolling?'Erinnerungen für Gruppe '+select.value+' aktiviert. Die Webseite muss dafür geöffnet und aktiv bleiben.':'Erinnerungen deaktiviert.';
+});
+locateButton.addEventListener('click',()=>{
+  const group=select.value;
+  const teachers=getTeachers(group);
+  if(!teachers)return;
+  if(!navigator.geolocation){feedback.textContent='GPS ist in diesem Browser nicht verfügbar.';return;}
+  if(!window.isSecureContext){feedback.textContent='GPS benötigt eine sichere HTTPS-Webseite. Öffnet diese Seite über die veröffentlichte GitHub-Adresse.';return;}
+  clearPrepared();
+  feedback.textContent='GPS-Position wird ermittelt. Bitte die Standortfreigabe bestätigen.';
+  locateButton.disabled=true;
+  const before=getSlot();
+  navigator.geolocation.getCurrentPosition(position=>{
+    locateButton.disabled=false;
+    // Die Position wird ausschliesslich im Browser für die Nachricht verwendet, nicht gespeichert.
+    const lat=position.coords.latitude.toFixed(5);
+    const lon=position.coords.longitude.toFixed(5);
+    const accuracy=Math.round(position.coords.accuracy);
+    const map='https://www.openstreetmap.org/?mlat='+lat+'&mlon='+lon+'#map=17/'+lat+'/'+lon;
+    const at=new Date().toLocaleString('de-CH',{timeZone:'Europe/Zurich',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    const isTest=!before.active;
+    currentMessage=(isTest?'TEST · Standortmeldung Herbsttag 2026':'Standortmeldung Herbsttag 2026')+'\nGruppe: '+group+'\nZeitpunkt: '+at+' Uhr\nStandort: '+map+'\nGPS-Genauigkeit: ca. '+accuracy+' m'+(isTest?'\nTESTMELDUNG – nicht für den Ernstfall.':'');
+    const link='https://teams.microsoft.com/l/chat/0/0?users='+teachers.addresses.join(',')+'&message='+encodeURIComponent(currentMessage);
+    teamsLink.href=link;
+    preparedGroup=group;
+    preparedSlot=before.active?before.id:'';
+    preview.textContent='Gruppe '+group+' · '+at+' Uhr. '+(isTest?'TEST-Nachricht':'Standortmeldung')+' für '+teachers.names+' vorbereitet.';
+    prepared.hidden=false;
+    feedback.textContent='Standort ermittelt. Jetzt Teams öffnen und die Nachricht dort senden.';
+  },error=>{
+    locateButton.disabled=false;
+    const texts={1:'Standortzugriff verweigert. Bitte in den Browsereinstellungen für diese Seite erlauben.',2:'Standort nicht verfügbar. Prüft GPS und Standortdienste.',3:'Die Standortermittlung hat zu lange gedauert. Erneut versuchen.'};
+    feedback.textContent=texts[error.code]||'Standort konnte nicht ermittelt werden.';
+  },{enableHighAccuracy:true,timeout:15000,maximumAge:0});
+});
+teamsLink.addEventListener('click',()=>{
+  if(!teamsLink.href||!getTeachers(preparedGroup))return;
+  if(preparedSlot){
+    save('herbsttag26-angezeigt-'+preparedGroup,preparedSlot);
+    refresh();
+  }
+  feedback.textContent='Teams wird geöffnet. Die Standortmeldung ist noch NICHT versendet. In Teams auf «Senden» tippen.';
+});
+copyButton.addEventListener('click',async()=>{
+  if(!currentMessage)return;
+  try{
+    await navigator.clipboard.writeText(currentMessage);
+    feedback.textContent='Nachricht kopiert. In Teams in den Chat der zuständigen Lehrpersonen einfügen und senden.';
+  }catch(e){feedback.textContent='Automatisches Kopieren nicht möglich. Bitte Teams-Link verwenden.';}
+});
+select.value=getSaved(GROUP_KEY);
+if(!getTeachers(select.value))select.value='';
+refresh();
+window.setInterval(refresh,15000);
+document.addEventListener('visibilitychange',refresh);
+})();
+</script></body></html>
