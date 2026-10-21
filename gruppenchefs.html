@@ -73,10 +73,6 @@
 .standort-input{min-width:0}.standort-input label,.standort-label{display:block;margin:0 0 6px;font-size:15px;font-weight:750}
 #standort-gruppe{display:block;width:100%;margin:0;font-size:17px;min-height:48px}
 #standort-empfaenger{margin:6px 0 0;line-height:1.4;font-size:16px}
-.standort-zielbox{margin:4px 0 18px;padding:12px 15px;border:1px solid #c4d7ca;background:#f8fbf8;border-radius:8px}
-.standort-zielbox label{display:block;margin-bottom:8px;font-size:16px;font-weight:750}
-#standort-ziel{display:block;width:100%;margin:0;min-height:48px;font-size:16px;background:#fff}
-#standort-ziel-hilfe{margin:9px 0 0;font-size:14px;overflow-wrap:anywhere}
 .standort-hinweis{padding:13px 15px;background:#eff5f1;border:1px solid #c4d7ca;border-radius:8px;font-size:15px}
 .standort-alarm{margin:12px 0 0;padding:16px;background:#fff3cc;border:2px solid #b8891c;border-radius:9px;color:#4f390b}
 .standort-alarm strong{display:block;font-size:19px}.standort-alarm span{font-size:15px}.standort-alarm p{margin:8px 0 0}
@@ -126,26 +122,18 @@
 <div class="standort-input"><label for="standort-gruppe">Eure Gruppe</label><select autocomplete="off" id="standort-gruppe"><option value="">Gruppe auswählen</option><option value="a1">a1</option><option value="a2">a2</option><option value="b1">b1</option><option value="b2">b2</option><option value="c1">c1</option><option value="c2">c2</option><option value="d1">d1</option><option value="d2">d2</option><option value="e1">e1</option><option value="e2">e2</option></select></div>
 <div class="standort-input"><span class="standort-label">Zuständige Lehrpersonen</span><p id="standort-empfaenger">Bitte zuerst die Gruppe auswählen.</p></div>
 </div>
-<div class="standort-zielbox">
-<label for="standort-ziel">Standort-PDF senden an</label>
-<select id="standort-ziel" autocomplete="off">
-<option value="teachers">Beide verantwortlichen Lehrpersonen</option>
-<option value="mario">Mario Mazzocco (Notfallkontakt)</option>
-<option value="all">Lehrpersonen und Mario Mazzocco</option>
-</select>
-<p class="note" id="standort-ziel-hilfe">Die Empfänger müssen nach dem Teilen in Microsoft Teams ausgewählt werden.</p>
-</div>
+<p class="note">An wen das PDF gesendet wird, bestimmt ihr beim Teilen in Microsoft Teams. Ihr könnt die verantwortlichen Lehrpersonen oder Mario Mazzocco auswählen.</p>
 <div aria-live="polite" class="standort-hinweis" id="standort-hinweis" role="status">Die Erinnerungen beginnen am 22.10.2026 um 08:45 Uhr.</div>
-<div aria-live="assertive" class="standort-alarm" hidden="" id="standort-alarm" role="status"><strong>Standortmeldung fällig</strong><span id="standort-alarm-zeit"></span><p>Aktuellen Standort ermitteln und das PDF an die ausgewählten Empfänger übermitteln.</p></div>
+<div aria-live="assertive" class="standort-alarm" hidden="" id="standort-alarm" role="status"><strong>Standortmeldung fällig</strong><span id="standort-alarm-zeit"></span><p>Aktuellen Standort ermitteln und das PDF über Teams an die gewünschten Kontakte senden.</p></div>
 <div class="standort-aktionen"><button class="standort-button standort-button-alt" disabled="" id="standort-aktivieren" type="button">Erinnerungen aktivieren</button><button class="standort-button" disabled="" id="standort-ermitteln" type="button">Standort ermitteln</button></div>
 <div class="standort-vorbereitet" hidden="" id="standort-vorbereitet"><p id="standort-vorschau">Standort-PDF bereit zur Weitergabe.</p>
 
 <div aria-label="PDF-Standortmeldung weitergeben" class="standort-teams-schritte"><p><strong>Standortmeldung als PDF senden</strong></p>
 <ol>
 <li>Auf <strong>«Standort-PDF erstellen und teilen»</strong> tippen. Das PDF enthält den anklickbaren swisstopo-QR-Code, Gruppe, Uhrzeit und GPS-Genauigkeit.</li>
-<li>Im Teilen-Menü <strong>Microsoft Teams</strong> auswählen und das PDF an <strong>die oben ausgewählten Empfänger</strong> senden. Die Empfängerauswahl in der Webseite versendet nichts automatisch.</li>
+<li>Im Teilen-Menü <strong>Microsoft Teams</strong> auswählen, die verantwortlichen Lehrpersonen oder Mario Mazzocco als Empfänger wählen und das PDF senden.</li>
 </ol>
-<p class="note">Falls Teams nicht im Teilen-Menü erscheint, wird das PDF heruntergeladen. Anschliessend im Teams-Chat der ausgewählten Empfänger als Datei anhängen.</p></div>
+<p class="note">Falls Teams nicht im Teilen-Menü erscheint, wird das PDF heruntergeladen. Anschliessend im gewünschten Teams-Chat als Datei anhängen.</p></div>
 <div class="standort-aktionen">
 <button class="standort-button" id="standort-pdf-teilen" type="button">Standort-PDF erstellen und teilen</button>
 
@@ -153,7 +141,7 @@
 
 <a class="standort-button standort-button-alt" href="#" id="standort-webkarte" rel="noopener noreferrer" target="_blank">Webkarte als Alternative öffnen</a>
 </div>
-<p class="note">Der QR-Code im PDF ist antippbar und öffnet swisstopo. Die Webkarte ist eine Alternative zur Standortkontrolle. Der Versand des PDF erfolgt nur durch euch.</p></div>
+<p class="note">Der QR-Code im PDF ist antippbar und öffnet swisstopo. Die Webkarte ist eine Alternative zur Standortkontrolle. Der Versand erfolgt erst nach eurer Bestätigung in Teams.</p></div>
 <p aria-live="polite" class="standort-meldung" id="standort-meldung"></p>
 <p class="note">Vor dem 22. Oktober erstellt «Standort ermitteln» ausschliesslich eine mit <strong>TEST</strong> gekennzeichnetes Standort-PDF. Die Gruppenwahl wird auf diesem Gerät gespeichert, nicht der GPS-Standort.</p>
 <p class="note">Erinnerungen funktionieren nur, solange diese Webseite im Browser geöffnet und aktiv ist. Bei gesperrtem Smartphone oder während der Nutzung von swisstopo können sie ausbleiben. Der Standortzugriff erfordert eine einmalige Browserfreigabe und eine HTTPS-Verbindung.</p>
@@ -1473,8 +1461,6 @@ const GROUP_KEY='herbsttag26-standort-gruppe';
 const ACTIVE_KEY='herbsttag26-erinnerung-an';
 const select=document.getElementById('standort-gruppe');
 const recipient=document.getElementById('standort-empfaenger');
-const sendTo=document.getElementById('standort-ziel');
-const recipientHelp=document.getElementById('standort-ziel-hilfe');
 const information=document.getElementById('standort-hinweis');
 const alarm=document.getElementById('standort-alarm');
 const alarmTime=document.getElementById('standort-alarm-zeit');
@@ -1514,25 +1500,6 @@ function getTeachers(group){
   const names=card.querySelector('.responsibility-names');
   if(addresses.length!==2||!names)return null;
   return {addresses,names:names.textContent.trim()};
-}
-// Die Auswahl benennt die vorgesehenen Empfänger. Der Versand wird in Teams
-// von der Gruppenleitung manuell an diese Kontakte adressiert.
-const MARIO_EMAIL='mario.mazzocco@ksab.ch';
-function getSendTarget(){
-  const teachers=getTeachers(select.value);
-  const mail=teachers?teachers.addresses.join(', '):'Gruppe zuerst auswählen';
-  switch(sendTo.value){
-    case 'mario': return {key:'mario',pdfLabel:'Mario Mazzocco',title:'Mario Mazzocco',emails:MARIO_EMAIL,fileSuffix:'Mario_Mazzocco'};
-    case 'all': return {key:'all',pdfLabel:'Lehrpersonen + Mario Mazzocco',title:(teachers?teachers.names+' und ':'')+'Mario Mazzocco',emails:mail+', '+MARIO_EMAIL,fileSuffix:'Lehrpersonen_und_Mario'};
-    default: return {key:'teachers',pdfLabel:'Lehrpersonen der Route',title:teachers?teachers.names:'beide verantwortlichen Lehrpersonen',emails:mail,fileSuffix:'Lehrpersonen'};
-  }
-}
-function updateSendTarget(){
-  const target=getSendTarget();
-  recipientHelp.textContent='In Microsoft Teams als Empfänger wählen: '+target.title+' ('+target.emails+'). Die Auswahl auf dieser Seite sendet das PDF nicht automatisch.';
-  if(currentPosition){
-    preview.textContent='Gruppe '+preparedGroup+' · '+currentPosition.at+' Uhr. '+(currentPosition.isTest?'TEST-Standort-PDF':'Standort-PDF')+' für '+target.title+' vorbereitet.';
-  }
 }
 function clearPrepared(){
   preparedGroup='';preparedSlot='';currentPosition=null;
@@ -1589,12 +1556,9 @@ function pdfLocationFile(){
   if(data.isTest){rect(455,777,98,27,'0.99 0.87 0.66');textAt(467,786,14,'TEST',true,'0.44 0.19 0.07');}
   rect(38,670,519,61,'0.94 0.97 0.95');
   textAt(57,692,24,'Gruppe '+data.group.toUpperCase(),true,green);
-  const target=getSendTarget();
-  textAt(38,642,12,'Empfaenger: '+target.pdfLabel,true,gray);
-  textAt(38,622,12,'Gruppenverantwortlich: '+data.names,false);
-  textAt(38,594,12,'Zeitpunkt: '+data.at+' Uhr');
-  textAt(38,574,11,'GPS-Genauigkeit: ca. '+data.accuracy+' m');
-  textAt(38,554,11,'GPS-Koordinaten: '+data.latitude.toFixed(7)+', '+data.longitude.toFixed(7));
+  textAt(38,639,12,'Zeitpunkt: '+data.at+' Uhr');
+  textAt(38,614,11,'GPS-Genauigkeit: ca. '+data.accuracy+' m');
+  textAt(38,590,11,'GPS-Koordinaten: '+data.latitude.toFixed(7)+', '+data.longitude.toFixed(7));
   // QR-Code: Scan liefert eine HTTPS-Standortseite mit App-Oeffnen-Schaltflaeche.
   // Direktes Antippen im PDF benutzt den swisstopo-App-Direktlink.
   const qr=new window.HerbsttagQRCode(0,1);
@@ -1650,7 +1614,7 @@ function pdfLocationFile(){
   for(let i=0;i<pdf.length;i++)bytes[i]=pdf.charCodeAt(i)&255;
   return new Blob([bytes],{type:'application/pdf'});
 }
-function pdfFilename(){return (currentPosition&&currentPosition.isTest?'TEST_':'')+'Herbsttag_Standort_'+preparedGroup+'_an_'+getSendTarget().fileSuffix+'.pdf';}
+function pdfFilename(){return (currentPosition&&currentPosition.isTest?'TEST_':'')+'Herbsttag_Standort_'+preparedGroup+'.pdf';}
 function downloadLocationPdf(file){
   const url=URL.createObjectURL(file);
   const anchor=document.createElement('a');
@@ -1658,24 +1622,23 @@ function downloadLocationPdf(file){
   setTimeout(()=>URL.revokeObjectURL(url),15000);
 }
 pdfShareButton.addEventListener('click',async()=>{
-  const target=getSendTarget();
   let file;
   try{file=new File([pdfLocationFile()],pdfFilename(),{type:'application/pdf'});}
   catch(error){feedback.textContent='PDF konnte nicht erstellt werden: '+error.message;return;}
   if(navigator.share&&(!navigator.canShare||navigator.canShare({files:[file]}))){
     try{
       // Teilen wird direkt aus dem Button-Klick aufgerufen, keine Hintergrunduebermittlung.
-      await navigator.share({files:[file],title:'Herbsttag: Standort Gruppe '+preparedGroup+' an '+target.title,text:'Standort-PDF für '+target.title+'. Empfänger in Teams: '+target.emails});
+      await navigator.share({files:[file],title:'Herbsttag: Standort Gruppe '+preparedGroup,text:'Standort-PDF der Gruppe '+preparedGroup+'. Empfänger in Teams auswählen und senden.'});
       if(preparedSlot)save('herbsttag26-angezeigt-'+preparedGroup,preparedSlot);
       refresh();
-      feedback.textContent='Teilen-Menü geschlossen. Prüft in Teams, ob das PDF an '+target.title+' gesendet wurde.';
+      feedback.textContent='Teilen-Menü geschlossen. Prüft in Teams, ob das PDF an die gewünschten Kontakte gesendet wurde.';
       return;
     }catch(error){
       if(error.name==='AbortError'){feedback.textContent='Teilen abgebrochen; die Standortmeldung wurde nicht versendet.';return;}
     }
   }
   downloadLocationPdf(file);
-  feedback.textContent='Das Gerät bietet keine PDF-Dateifreigabe an. PDF heruntergeladen. Im Teams-Chat an '+target.title+' als Datei anhängen.';
+  feedback.textContent='Das Gerät bietet keine PDF-Dateifreigabe an. PDF heruntergeladen. Im gewünschten Teams-Chat als Datei anhängen.';
 });
 function showReceivedLocation(){
   const params=new URLSearchParams(window.location.hash.replace(/^#/,''));
@@ -1699,7 +1662,6 @@ function refresh(){
   const group=select.value;
   const teachers=getTeachers(group);
   recipient.textContent=teachers?teachers.names:'Bitte zuerst die Gruppe auswählen.';
-  updateSendTarget();
   locateButton.disabled=!teachers;
   activateButton.disabled=!teachers;
   const enrolled=getSaved(ACTIVE_KEY)==='1';
@@ -1745,11 +1707,6 @@ select.addEventListener('change',()=>{
   lastAlertSlot='';
   refresh();
 });
-sendTo.addEventListener('change',()=>{
-  save('herbsttag26-pdf-empfaenger',sendTo.value);
-  feedback.textContent='';
-  updateSendTarget();
-});
 activateButton.addEventListener('click',()=>{
   if(!getTeachers(select.value))return;
   const enrolling=getSaved(ACTIVE_KEY)!=='1';
@@ -1783,7 +1740,7 @@ locateButton.addEventListener('click',()=>{
     currentPosition={group,latitude,longitude,accuracy,appUrl,webUrl,locationUrl:teamMapUrl,at,isTest,names:teachers.names};
     preparedGroup=group;
     preparedSlot=before.active?before.id:'';
-    preview.textContent='Gruppe '+group+' · '+at+' Uhr. '+(isTest?'TEST-Standort-PDF':'Standort-PDF')+' für '+getSendTarget().title+' vorbereitet.';
+    preview.textContent='Gruppe '+group+' · '+at+' Uhr. '+(isTest?'TEST-Standort-PDF':'Standort-PDF')+' zur Weitergabe über Teams vorbereitet.';
     prepared.hidden=false;
     feedback.textContent='Standort ermittelt. PDF erstellen und über Teams teilen oder alternativ die Webkarte öffnen.';
   },error=>{
@@ -1793,8 +1750,6 @@ locateButton.addEventListener('click',()=>{
   },{enableHighAccuracy:true,timeout:15000,maximumAge:0});
 });
 showReceivedLocation();
-sendTo.value=getSaved('herbsttag26-pdf-empfaenger')||'teachers';
-if(!['teachers','mario','all'].includes(sendTo.value))sendTo.value='teachers';
 select.value=getSaved(GROUP_KEY);
 if(!getTeachers(select.value))select.value='';
 refresh();
